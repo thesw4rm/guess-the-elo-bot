@@ -1,0 +1,21 @@
+# Anything without a value assigned will be shown as "REDACTED"
+# If you want to keep the original value, set the header equal to KEEP_ORIG
+
+# Regular headers
+Event=Guess The Elo
+Site=KEEP_ORIG
+Date=KEEP_ORIG
+Result=KEEP_ORIG
+
+# Start at the beginning position
+CurrentPosition = rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+
+# Required headers
+SUBMITTER_NAME=Streamer Sub
+OPPONENT_NAME=Random Noob
+
+# Extra headers that may not be there
+Termination
+
+
+
