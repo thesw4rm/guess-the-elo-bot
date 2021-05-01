@@ -13,9 +13,9 @@ player color from messages in a channel - probably very soon
 
 2. Integration with Lichess and chess.com API to automatically
 create studies/analysis boards
-        * Probably gonna happen very quickly with Lichess.
-        Not sure about chess.com because so far I cannot find support for it in
-        their API. If anyone can help I will appreciate!
+    1. Probably gonna happen very quickly with Lichess.
+       Not sure about chess.com because so far I cannot find support for it in
+       their API. If anyone can help I will appreciate!
 
 3. Remove variations and computer analysis - will take longer than 1.
 
