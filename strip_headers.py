@@ -34,14 +34,18 @@ with open(sys.argv[2], "r") as hdr_file:
         # Check if it is a comment or the line is empty
         if should_ignore_hdr(hdr):
             continue
+
         if "SUBMITTER_NAME" in hdr:
             reqd_headers[submitter_color] = hdr.split("=")[1].strip()
+
         if "OPPONENT_NAME" in hdr:
             reqd_headers[opponent_color] = hdr.split("=")[1].strip()
+
         # Check if the header has a constant value
         if "=" in hdr:
             hdr_key, hdr_val = hdr.strip().split("=")[0:2]
             reqd_headers[hdr_key.strip()] = hdr_val.strip()
+
         # Set it to REDACTED but keep it in there
         else:
             reqd_headers[hdr.strip()] = "REDACTED"
