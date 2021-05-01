@@ -2,11 +2,10 @@
 
 ## Purpose
 
-This is a very quick project to strip headers from a chess PGN to anonimise it
+This is a project to strip headers from a chess PGN to anonimise it
 for use in a guess the Elo stream.
 
-Currently this is a very quick script that works on a downloaded PGN. Eventual
-plans are
+Eventual plans are
 
 1. ~~Turn into a discord bot that can automatically read PGN and
 player color from messages in a channel~~ - DONE
