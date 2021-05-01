@@ -1,25 +1,7 @@
-# Guess The Elo Bot
+# Script
 
-## Purpose
-
-This is a very quick project to strip headers from a chess PGN to anonimise it
-for use in a guess the Elo stream.
-
-Currently this is a very quick script that works on a downloaded PGN. Eventual
-plans are
-
-1. Turn into a discord bot that can automatically read PGN and
-player color from messages in a channel - probably very soon
-
-2. Integration with Lichess and chess.com API to automatically
-create studies/analysis boards
-    1. Probably gonna happen very quickly with Lichess.
-       Not sure about chess.com because so far I cannot find support for it in
-       their API. If anyone can help I will appreciate!
-
-3. Remove variations and computer analysis - will take longer than 1.
-
-4. Turn into a full website - only if there's actual requests for it
+This is a quick and dirty script that will strip headers as needed on manually
+specified PGN files
 
 ## Dependencies
 
