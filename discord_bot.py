@@ -132,7 +132,7 @@ async def on_message(msg):
         await msg.channel.send("{.author} Successfully imported your"
                                "PGN!".format(msg))
 
-        # UUID will generate a random filename for each game
+        # UUID will generate a different filename for each game
         file_id = str(uuid.uuid1())
 
         # Writing the original game
