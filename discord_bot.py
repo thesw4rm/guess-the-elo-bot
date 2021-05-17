@@ -112,9 +112,6 @@ async def on_message(msg):
             return await msg.channel.send("{.author} Failure parsing"
                                           "pgn".format(msg))
 
-        # Special headers come first
-        game.headers[sub_color] = reqd_headers["_SUB_NAME"]
-        game.headers[op_color] = reqd_headers["_OP_NAME"]
         for hdr in game.headers:
             if hdr in reqd_headers:
                 # If we are not keeping the original value
@@ -122,6 +119,11 @@ async def on_message(msg):
                     game.headers[hdr] = reqd_headers[hdr]
             else:
                 del game.headers[hdr]
+
+        # Special headers come last so that the above for loop
+        # doesn't override them
+        game.headers[sub_color] = reqd_headers["_SUB_NAME"]
+        game.headers[op_color] = reqd_headers["_OP_NAME"]
         stripped_game = str(game)
 
         if "?" in stripped_game:
