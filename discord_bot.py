@@ -15,7 +15,7 @@ CHAN_NAME = config["CHANNEL_NAME"]
 OUTPUT_FILE_EXT = config["OUTPUT_FILE_EXT"]
 ORIG_FILE_DIR = config["ORIG_FILE_DIR"]
 STRIPPED_FILE_DIR = config["STRIPPED_FILE_DIR"]
-GAME_TIMEOUT = config["GAME_TIMEOUT"]
+GAME_TIMEOUT = float(config["GAME_TIMEOUT"])
 
 
 reqd_headers = {}
@@ -131,11 +131,11 @@ async def on_message(msg):
                                "PGN!".format(msg))
 
         # UUID will generate a random filename for each game
-        file_id = uuid.uuid1()
+        file_id = str(uuid.uuid1())
 
         # Writing the original game
         with open(ORIG_FILE_DIR + file_id + ".pgn", "w") as orig_file:
-            orig_file.write(orig_game)
+            orig_file.write(orig_game.decode("utf-8"))
 
         # Writing the stripped/anonimised game
         with open(STRIPPED_FILE_DIR + file_id + OUTPUT_FILE_EXT + ".pgn", "w") as stripped_file:
